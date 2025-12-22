@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "autotestgen"
+version = "0.1.0"
+description = ""
+authors = ["Cursor Agent <cursoragent@cursor.com>"]
+readme = "README.md"
+packages = [{include = "autotestgen", from = "src"}]
+
+[tool.poetry.scripts]
+autotestgen = "autotestgen.cli:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.20.1"
+rich = "^14.2.0"
+pydantic = "^2.12.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
